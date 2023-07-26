@@ -1,6 +1,6 @@
 #include <iostream>
-#include <ctime>
 #include <Windows.h>
+#include <conio.h>
 
 using namespace std;
 
@@ -15,14 +15,17 @@ unsigned int hours;
 
 int main(){
     init();
-    setCountingTime();
     runCountdown();
     return 0;
 }
 
 void init(){
+    cout << "\n\n\n";
     cout << "********* Welcome to CountDownTimer *********" << endl;
     cout << "\nPlease enter the time you want to count down." << endl;
+    cout << "\n";
+    setCountingTime();
+    cout << "*********************************************" << endl;
 }
 
 void setCountingTime(){
@@ -36,8 +39,9 @@ void setCountingTime(){
 
 void runCountdown(){
      while(seconds >= 1){
-        showTime();
         Sleep(1000);
+        // system("cls");
+        showTime();
         --seconds;
 
         if(seconds == 0 && minutes > 0){
@@ -60,5 +64,9 @@ void runCountdown(){
 }
 
 void showTime(){
+    cout << "************** Count Down Timer *************" << endl;
+    cout << "\n";
     cout << hours << ":" << minutes << ":" << seconds << endl;
+    cout << "\n";
+    cout << "*********************************************" << endl;
 }
