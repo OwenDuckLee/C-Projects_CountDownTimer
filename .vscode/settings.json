@@ -9,6 +9,8 @@
     "code-runner.saveFileBeforeRun": true,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "xstring": "cpp",
+        "ostream": "cpp"
     },
 }
